@@ -1,0 +1,223 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(120deg, #152b39, #360f19);
+  color: #8f8f8f;
+  font-size: 14px;
+}
+
+.mgb12 {
+  margin-bottom: 12px;
+}
+
+.mgb24 {
+  margin-bottom: 24px;
+}
+
+.mgb32 {
+  margin-bottom: 32px;
+}
+
+.container {
+  width: 380px;
+  height: 420px;
+  border-radius: 16px;
+  position: relative;
+  overflow: hidden;
+}
+
+.container::before {
+  content: ' ';
+  position: absolute;
+  left: -50%;
+  top: -50%;
+  width: 380px;
+  height: 420px;
+  background: linear-gradient(
+    0deg,
+    transparent,
+    transparent,
+    #950839,
+    #950839,
+    #950839
+  );
+  z-index: 1;
+  animation: animate 6s linear infinite;
+  transform-origin: bottom right;
+}
+
+.container::after {
+  content: ' ';
+  position: absolute;
+  left: -50%;
+  top: -50%;
+  width: 380px;
+  height: 420px;
+  background: linear-gradient(
+    0deg,
+    transparent,
+    transparent,
+    #950839,
+    #950839,
+    #950839
+  );
+  z-index: 1;
+  animation: animate 6s linear infinite;
+  animation-delay: -3s;
+  transform-origin: bottom right;
+}
+
+.border-line::before {
+  content: ' ';
+  position: absolute;
+  left: -50%;
+  top: -50%;
+  width: 380px;
+  height: 420px;
+  background: linear-gradient(
+    0deg,
+    transparent,
+    transparent,
+    #743418,
+    #743418,
+    #743418
+  );
+  z-index: 1;
+  animation: animate 6s linear infinite;
+  animation-delay: -1.5s;
+  transform-origin: bottom right;
+}
+
+.border-line::after {
+  content: ' ';
+  position: absolute;
+  left: -50%;
+  top: -50%;
+  width: 380px;
+  height: 420px;
+  background: linear-gradient(
+    0deg,
+    transparent,
+    transparent,
+    #743418,
+    #743418,
+    #743418
+  );
+  z-index: 1;
+  animation: animate 6s linear infinite;
+  animation-delay: -4.5s;
+  transform-origin: bottom right;
+}
+
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.container form {
+  position: absolute;
+  background-color: #222;
+  padding: 50px 40px;
+  border-radius: 16px;
+  background: linear-gradient(120deg, #191922, #1b0309);
+  z-index: 2;
+  inset: 4px;
+}
+
+.container form h2 {
+  text-align: center;
+  letter-spacing: 10px;
+  margin-bottom: 24px;
+  color: #fff;
+}
+
+.container form .input-box {
+  width: 300px;
+  position: relative;
+}
+
+.container form .input-box input {
+  width: 100%;
+  padding: 20px 10px 10px;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  color: #2f3037;
+}
+
+.container form .input-box label {
+  position: absolute;
+  left: 0;
+  padding: 20px 0 10px;
+  transition: 0.5s;
+  font-size: 16px;
+  pointer-events: none;
+}
+
+.container form .input-box input:focus ~ label,
+.container form .input-box input:valid ~ label {
+  color: #fff;
+  transform: translateY(-34px);
+  font-size: 14px;
+}
+
+.container form .input-box i {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: #fff;
+  height: 2px;
+  width: 100%;
+  transition: 0.5s;
+  border-radius: 4px;
+}
+
+.container form .input-box input:valid ~ i,
+.container form .input-box input:focus ~ i {
+  height: 44px;
+}
+
+.container form .forget a {
+  text-decoration: none;
+  color: #8f8f8f;
+}
+
+.container form .forget a:hover {
+  color: #fff;
+}
+
+.container form .login-btn {
+  width: 100%;
+  border-radius: 8px;
+  padding: 9px 25px;
+  outline: none;
+  border: none;
+  font-size: 16px;
+  letter-spacing: 12px;
+  margin-bottom: 24px;
+}
+
+.container form .signup-box {
+  text-align: center;
+}
+
+.container form .signup-box a {
+  color: #cdcdcd;
+  text-decoration: none;
+}
+
+.container form .signup-box a:hover {
+  color: #fff;
+}
