@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #2b323c;
+  height: 100vh;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+.container h1 {
+  font-size: 80px;
+  font-weight: 800;
+}
+
+.container h1 span {
+  color: #e09c1d;
+}
